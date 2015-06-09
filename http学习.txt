@@ -1,26 +1,26 @@
-1.3.1 Ã½ÌåÀàÐÍ
-    1.httpÐ­Òé¸øÃ¿ÖÖÒªÍ¨¹ýWeb´«ÊäµÄ¶ÔÏó´òÉÏMIMEÀàÐÍ(MIME
-        Type)µÄÊý¾Ý¸ñÊ½±êÇ©¡£MIME(Multipurpose Internet Mail Extension,
-        ¶àÓÃÍ¾ÒòÌØÍøÓÊ¼þÀ©Õ¹)ÓÃÀ´±ê¼Ç¶àÃ½ÌåÎÄ¼þ¡£
-    2.¸½Â¼D
+1.3.1 åª’ä½“ç±»åž‹
+    1.httpåè®®ç»™æ¯ç§è¦é€šè¿‡Webä¼ è¾“çš„å¯¹è±¡æ‰“ä¸ŠMIMEç±»åž‹(MIME
+        Type)çš„æ•°æ®æ ¼å¼æ ‡ç­¾ã€‚MIME(Multipurpose Internet Mail Extension,
+        å¤šç”¨é€”å› ç‰¹ç½‘é‚®ä»¶æ‰©å±•)ç”¨æ¥æ ‡è®°å¤šåª’ä½“æ–‡ä»¶ã€‚
+    2.é™„å½•D
 1.3.3 URL
-    1.URL°üº¬Èý¸ö²¿·Ö
-    µÚÒ»²¿·ÖÊÇ·½°¸(scheme)£¬Í¨³£ÊÇhttp://
-    µÚ¶þ²¿·ÖÊÇ·þÎñÆ÷µÄÒòÌØÍøµØÖ·
-    µÚÈý²¿·ÖÊÇWeb·þÎñÆ÷ÉÏµÄÄ³¸ö×ÊÔ´
-1.4 ÊÂÎñ
-    1.Ò»¸öHTTPÊÂÎñÓÉÒ»Ìõ(´Ó¿Í»§¶Ë·¢Íù·þÎñÆ÷µÄ)ÇëÇóÃüÁîºÍÒ»¸ö(´Ó·þÎñÆ÷·¢»Ø¿Í»§¶ËµÄ)ÏìÓ¦½á¹û×é³É¡£
-1.5 ±¨ÎÄ
-1.6 Á¬½Ó
+    1.URLåŒ…å«ä¸‰ä¸ªéƒ¨åˆ†
+    ç¬¬ä¸€éƒ¨åˆ†æ˜¯æ–¹æ¡ˆ(scheme)ï¼Œé€šå¸¸æ˜¯http://
+    ç¬¬äºŒéƒ¨åˆ†æ˜¯æœåŠ¡å™¨çš„å› ç‰¹ç½‘åœ°å€
+    ç¬¬ä¸‰éƒ¨åˆ†æ˜¯WebæœåŠ¡å™¨ä¸Šçš„æŸä¸ªèµ„æº
+1.4 äº‹åŠ¡
+    1.ä¸€ä¸ªHTTPäº‹åŠ¡ç”±ä¸€æ¡(ä»Žå®¢æˆ·ç«¯å‘å¾€æœåŠ¡å™¨çš„)è¯·æ±‚å‘½ä»¤å’Œä¸€ä¸ª(ä»ŽæœåŠ¡å™¨å‘å›žå®¢æˆ·ç«¯çš„)å“åº”ç»“æžœç»„æˆã€‚
+1.5 æŠ¥æ–‡
+1.6 è¿žæŽ¥
     1.6.1 TCP/IP
     1.TCP 
-    ÎÞ²î´íµÄÊý¾Ý´«Êä
-    °´Ðò´«Êä(Êý¾Ý×ÜÊÇ»á°´ÕÕ·¢ËÍµÄË³Ðòµ½´ï)
-    Î´·Ö¶ÎµÄÊý¾ÝÁ÷(¿ÉÒÔÔÚÈÎÒâÊ±¿ÌÒÔÈÎÒâ³ß´ç½«Êý¾Ý·¢ËÍ³öÈ¥)
-    1.6.2 Á¬½Ó¡¢IPµØÖ·¼°¶Ë¿ÚºÅ
-    1.»ñÈ¡×ÊÔ´¹ý³Ì
-    ÓÃ»§ÊäÈëURL(http://www.joes-hardware.com:80/tools.com)£¬»ñÈ¡Ö÷»úÃû(www.joes-hardware.com)£¬¾­¹ýDNS×ª»»£¬ÔÙ»ñÈ¡¶Ë¿ÚºÅ£¬×îÖÕÁ¬½Óµ½(161.58.228.45)µÄ¶Ë¿Ú80£¬·¢ËÍÒ»ÌõHTTP GETÇëÇó£¬´Ó·þÎñÆ÷¶ÁÈ¡HTTPÏìÓ¦£¬¹Ø±ÕÁ¬½Ó
-1.8 WebµÄ½á¹¹×é¼þ
-    1.8.1 ´úÀí
-    Î»ÓÚ¿Í»§¶ËºÍ·þÎñÆ÷Ö®¼äµÄHTTPÖÐ¼äÊµÌå
+    æ— å·®é”™çš„æ•°æ®ä¼ è¾“
+    æŒ‰åºä¼ è¾“(æ•°æ®æ€»æ˜¯ä¼šæŒ‰ç…§å‘é€çš„é¡ºåºåˆ°è¾¾)
+    æœªåˆ†æ®µçš„æ•°æ®æµ(å¯ä»¥åœ¨ä»»æ„æ—¶åˆ»ä»¥ä»»æ„å°ºå¯¸å°†æ•°æ®å‘é€å‡ºåŽ»)
+    1.6.2 è¿žæŽ¥ã€IPåœ°å€åŠç«¯å£å·
+    1.èŽ·å–èµ„æºè¿‡ç¨‹
+    ç”¨æˆ·è¾“å…¥URL(http://www.joes-hardware.com:80/tools.com)ï¼ŒèŽ·å–ä¸»æœºå(www.joes-hardware.com)ï¼Œç»è¿‡DNSè½¬æ¢ï¼Œå†èŽ·å–ç«¯å£å·ï¼Œæœ€ç»ˆè¿žæŽ¥åˆ°(161.58.228.45)çš„ç«¯å£80ï¼Œå‘é€ä¸€æ¡HTTP GETè¯·æ±‚ï¼Œä»ŽæœåŠ¡å™¨è¯»å–HTTPå“åº”ï¼Œå…³é—­è¿žæŽ¥
+1.8 Webçš„ç»“æž„ç»„ä»¶
+    1.8.1 ä»£ç†
+    ä½äºŽå®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨ä¹‹é—´çš„HTTPä¸­é—´å®žä½“
     
