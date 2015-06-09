@@ -1,0 +1,8 @@
+1.sqlite3 MovieSite.db 新建
+2.sqlite>
+3.create table movie(title, year, contry, abstract);
+4.insert into movie values('黑暗骑士', 2005, '美国', 'Why so serious?');
+5.其他操作 .help .databases查看当前的数据列表 .tables查看当前的表
+.quit退出控制台
+6.select * from movie;
+7.

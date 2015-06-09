@@ -1,0 +1,172 @@
+pwd:Print work directory
+cd:change directory
+	-:上一次打开的路径
+ls:显示当前目录下的文件
+	-a(all):显示所有文件，包括隐藏文件
+	-l(longlist):查看详细信息
+	-h:文件大小以K为单位
+	-d:查看目录信息(不会显示目录中的所有目录，只会显示文件夹的绝对路径)
+	-i:显示inode
+mkdir:创建目录
+	-p:递归创建
+rmdir:remove directory(少)
+rm:
+	-r:删除目录
+	-f:force
+touch:创建空文件
+	-
+cp: copy
+	-r:复制目录
+	-p:属性复制
+	-d:
+	-a:-pdr
+mv:move
+	-
+locate:(updatedb更新数据库) 在数据库中按#文件名#搜索，搜索速度快，只能搜索文件名
+	/etc/updatedb.conf 配置文件: 负责搜索规则
+whereis:搜索命令的命令
+	-b: 只查找可执行文件
+	-m: 只查找帮助文件
+which:大致相同whereis 而且可以查看别名
+	找不到cd: cd是shell命令
+find:
+	fine /root -iname install.log 不区分大小写
+	find /root -user root 按照所有者搜索
+	find /root -nouser 查找没有所有者的文件
+	find /var/log/ -mtime +10 查找10天前修改的文件
+		-10 10内 10 10天当天 +10 10前
+		atime 文件访问时间
+		ctime 改变文件属性
+		mtime 修改文件内容
+	find . -size 25k/M 查找文件大小是25KB的文件
+		-25k 小于25k 25k 等于25KB +25k 大于25k
+	find . -inum 262422 查找i节点是262422的文件
+	find /etc -size +25k -a -size -50k
+		-a and 逻辑与
+		-o or  逻辑或
+	find /etc -size +20k -a -size -50k -exec ls -lh {}\; 查找/etc/ 目录下，大于20KB并且小于50KB的文件，并显示详细信息
+		-exec 命令 {}\; 
+grep: 文件中字符串的搜索
+	-V 取反
+	-i 忽略大小写
+lastlog: 查看所有用户的最后一次登录时间
+last: 
+w: 除了我还有谁
+who: 除了我还有谁 
+-rw-r--r--.:
+	-:文件类型(d:目录 l:软连接)
+	所有者u/用户组g/其他组o
+
+Ctrl + L: 清屏
+Ctrl + C: 终止当前命令直接到下一行
+Ctrl + D: 退出当前终端
+Ctrl + Z: 暂停当前进程
+
+目录的作用:
+	*根目录下的bin和sbin，usr目录下的bin和sbin，这四个目录都是用来保存系统命令的。sbin是超级用户才能使用。
+	boot:启动文件
+	etc:配置文件
+	lib:函数库，动态连接共享库
+	lost+found:非法关机时，会存放一些文件
+	opt:额外安装软件所设置的目录
+	proc/sys:内存的挂载点
+	usr:系统软件资源目录
+	proc:虚拟的一个目录，是系统内存的映射，可以直接修改一些文件，例如：屏蔽	主机的ping命令
+	srv:一些服务启动之后需要提取的数据
+	sys:存放的是与硬件驱动程序相关的信息
+	usr:用户的很多应用程序和文件都存放在该目录之下
+	usr/bin:系统用户使用的应用程序
+	usr/sbin:超级用户使用的比较高级的管理程序和系统守护程序
+	var:存放的是不断扩充且经常被修改的目录，包括各种日志文件	
+
+链接命令: ln
+	
+Shell基础
+
+Linux的7个运行级别
+0 - 关机
+1 - 单用户模式
+2 - 多用户模式，但没有NFS服务
+3 - 当前所用的命令行模式
+4 - 预留
+5 - 图形模式
+6 - 重启
+
+正确关机顺序 sync -> shutdown -> reboot -> halt 
+	1.首先要查看系统的使用状态
+		who:谁在线
+		netstat -a:
+		ps -aux:
+	2.关机
+		shutdown -h 10 	//十分钟后关机，并显示在显示屏上
+		shutdown -h now //立刻关机
+		shutdown -r now //立刻重启
+		halt 			//立刻关机	
+echo $PATH 显示环境变量
+PATH=$PATH:/root 添加环境变量
+
+lrwxrwxrwx. 1 root root 13 5月 7 17:54 /etc/rc.local -> rc.d/rc.local
+第一列：文件的类型、所属主、所属组以及其他用户对该文件的权限。最后的.代表文件具有seLinux或acl属性。
+第二列：有多少文件名连接到此节点(i-node)。
+第三列：文件的所属主。
+第四列：文件的所属组。
+第五列：文件的大小。
+第六、七、八列：文件最有一次修改的时间。
+第九列：文件名。
+
+chgrp -R
+chown -R user1:testgroup test
+chmod (r=4 w=2 x=1)
+
+/etc/passwd
+1用户名；
+2存放的是该账号的口令，因为有/etc/shadow，所以现在是x；
+3uid
+4gid
+5注释说明
+6家目录
+7shell
+
+/etc/shadow
+1用户名
+2用户密码
+3上次更改密码的日期
+4过多少天才能更改密码
+5密码多少天后到期
+6密码到期前的警告期限
+7账号失效期限
+8账号的生命周期
+
+groupadd [-g GID] grpname
+例：groupadd -g 511 grptest1
+groupdel grpname
+例：groupdel grptest1
+useradd [-u UID][-g GID][-d HOME][-M][-s] username
+userdel [-r] username
+
+df 查看已挂载磁盘的总容量、使用容量、剩余容量等
+-i 查看inodes的使用状况
+-h 使用合适的单位显示
+du 查看某个目录或文件所占空间的大小
+-a 全部文件和目录
+-s 列出总和
+-h 使用合适单位
+
+fdisk:	硬盘分区工具
+-l：不加设备名称会列出系统中所有的磁盘设备及分区表，后面可以加设备名
+不加-l直接加设备名：会对磁盘进行分区操作
+	p：打印当前磁盘的分区情况
+	n：建立一个新的分区
+		e：扩展分区
+		p：主分区
+			Partition number
+			First cylinder
+			Last cylinder
+	w：保存
+	q：退出
+	d：删除一个分区
+
+mke2fs mkfs.ext2 mkfs.ext3 mkfs.ext4：格式化磁盘分区
+-b：设定每个数据区块的大小
+-t：指定文件系统的类型
+栗子：mke2fs -t ext4 -b 4096 /dev/sdb5
