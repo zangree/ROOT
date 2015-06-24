@@ -1,4 +1,4 @@
-#-*-coding:utf-8-*-
+﻿#-*-coding:utf-8-*-
 #****Python字符编码问题****
 #python 2.7.8
 '''
